@@ -121,13 +121,20 @@ header {
 .one {
     background-color: var(--background-color);
     display: flex;
-    gap: 6rem;
-    color: var(--bright-color);
+    flex-direction: column;
+}
+
+.main-one{
+    display: flex;
+    height: 80svh;
+    width: 80svw;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .image {
     background-color: var(--main-color);
-    height: 70%;
+    height: 80%;
     box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
     animation: blob 10s ease-in-out infinite;
     transition: all 0.5s;
@@ -143,32 +150,50 @@ header {
     transition: all 5s ease-in-out;
 }
 
-.main-content{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 40%;
-}
-
-.main-title{
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.main-text{
-    font-size: 1.5rem;
-    text-align: justify;
-}
-
-.main-strong{
-    color: var(--main-color);
-}
-
 .scroll-about{
     text-decoration: none;
     color: var(--bright-color);
     font-size: 1.5rem;
     transition: all 1s;
+    margin-left: 55%;
+    animation: fly 2s ease-in-out infinite;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    line-height: 5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.fa-brands{
+    color: var(--bright-color);
+}
+
+.center-icon{
+    color: var(--background-color);
+    font-size: 2rem;
+}
+
+.two {
+    background-color: var(--background-color);
+    color: var(--bright-color);
+}
+
+.about-title{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.about-text{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.about-strong{
+    color: var(--main-color);
 }
 
 .cs{
@@ -194,10 +219,6 @@ header {
 .js{
     color: #f7e025;
     font-weight: 700;
-}
-
-.two {
-    background-color: var(--background-color);
 }
 
 .three {
@@ -227,6 +248,18 @@ header {
 
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+@keyframes fly {
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
     }
 }
 
