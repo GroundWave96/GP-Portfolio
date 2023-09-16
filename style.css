@@ -309,14 +309,11 @@ header {
 
     .social-icons{
         flex-direction: row;
+        gap: 3rem;
     }
 
     .main-one{
         flex-direction: column-reverse;
-    }
-
-    .social-icons{
-        gap: 3rem;
     }
 
     .image{
@@ -329,5 +326,17 @@ header {
 
     .about{
         margin: 0 5%;
+    }
+
+    .scroll-about{
+        margin-left: 40%;
+    }
+
+    .about-title{
+        font-size: 2rem;
+    }
+    
+    .about-text{
+        font-size: 1rem;
     }
 }
