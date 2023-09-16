@@ -173,13 +173,19 @@ header {
 }
 
 .center-icon{
-    color: var(--background-color);
     font-size: 2rem;
 }
 
 .two {
     background-color: var(--background-color);
     color: var(--bright-color);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15%;
+    gap: 3rem;
 }
 
 .about-title{
@@ -299,5 +305,29 @@ header {
 
     .menu-logo {
         display: none;
+    }
+
+    .social-icons{
+        flex-direction: row;
+    }
+
+    .main-one{
+        flex-direction: column-reverse;
+    }
+
+    .social-icons{
+        gap: 3rem;
+    }
+
+    .image{
+        height: 70%;
+    }
+
+    .center-icon{
+        display: none;
+    }
+
+    .about{
+        margin: 0 5%;
     }
 }
