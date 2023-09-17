@@ -478,7 +478,7 @@ header {
     }
 
     .scroll-about {
-        margin-left: 40%;
+        margin-left: 35%;
     }
 
     .about-title {
@@ -506,7 +506,8 @@ header {
     }
 
     .prog-img {
-        gap: 1.5rem;
+        gap: 0rem;
+        justify-content: space-around;
     }
     .language-img {
         width: 3.5rem;
