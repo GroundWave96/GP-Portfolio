@@ -365,7 +365,7 @@ header {
 
     .social{
         flex-direction: row;
-        gap: 3rem;
+        gap: 1rem;
     }
 
     .main-one{
@@ -394,5 +394,21 @@ header {
     
     .about-text{
         font-size: 1rem;
+    }
+
+    .social-btn:hover:nth-child(1){
+        width: 4rem;
+    }
+    
+    .social-btn:hover:nth-child(2){
+        width: 4rem;
+    }
+    
+    .social-btn:hover:nth-child(3){
+        width: 4rem;
+    }
+    
+    .social-btn:hover:nth-child(4){
+        width: 4rem;
     }
 }
