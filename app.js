@@ -1,3 +1,5 @@
+/* ----------Menu---------- */
+
 const btnMobile = document.getElementById("menu-mobile-btn");
 
 function toggleMenu(event) {
@@ -8,3 +10,22 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+/* ----------Scroll-animation---------- */
+
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
+})
+
+const elements = document.querySelectorAll('.hidden')
+
+elements.forEach((element) => myObserver.observe(element))
+
+/* ----------a---------- */
+/* ----------a---------- */

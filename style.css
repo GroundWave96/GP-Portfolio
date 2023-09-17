@@ -124,7 +124,7 @@ header {
     flex-direction: column;
 }
 
-.main-one{
+.main-one {
     display: flex;
     height: 80svh;
     width: 80svw;
@@ -137,7 +137,7 @@ header {
     height: 80%;
     box-shadow: 0 20px 5px 5px rgba(0, 0, 0, 0.2);
     animation: blob 10s ease-in-out infinite;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .image:hover {
@@ -150,16 +150,34 @@ header {
     transition: all 5s ease-in-out;
 }
 
-.scroll-about{
+.main-one .image.hidden {
+    opacity: 0;
+}
+
+.main-one .image.show {
+    opacity: 1;
+}
+
+.scroll-about {
     text-decoration: none;
     color: var(--bright-color);
     font-size: 1.5rem;
-    transition: all 1s;
+    transition: opacity 5s;
     margin-left: 55%;
     animation: fly 2s ease-in-out infinite;
+    padding: 2rem;
 }
 
-.social{
+.scroll-about.hidden {
+    opacity: 0;
+}
+
+.scroll-about.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
@@ -169,7 +187,7 @@ header {
     gap: 2rem;
 }
 
-.social-btn{
+.social-btn {
     display: inline-block;
     width: 4rem;
     height: 4rem;
@@ -179,56 +197,66 @@ header {
     background-color: var(--header-color);
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-    transition: all .3s ease-out;
+    transform: translateX(-100px);
+    transition: all .4s ease-out;
 }
 
-.social-btn span{
+.social-btn span {
     font-size: 1.6rem;
     color: var(--bright-color);
     margin-left: 1rem;
 }
 
-.social-icon{
+.social .social-btn.hidden {
+    opacity: 0;
+}
+
+.social .social-btn.show {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.social-icon {
     display: inline-block;
 }
 
-.social-btn:hover:nth-child(1){
+.social-btn:hover:nth-child(1) {
     width: 11.5rem;
 }
 
-.social-btn:hover:nth-child(2){
+.social-btn:hover:nth-child(2) {
     width: 14rem;
 }
 
-.social-btn:hover:nth-child(3){
+.social-btn:hover:nth-child(3) {
     width: 12rem;
 }
 
-.social-btn:hover:nth-child(4){
+.social-btn:hover:nth-child(4) {
     width: 14rem;
 }
 
-.social-btn .fa-github{
+.social-btn .fa-github {
     color: var(--bright-color);
     margin-left: 1.02rem;
 }
 
-.social-btn .fa-instagram{
+.social-btn .fa-instagram {
     color: var(--bright-color);
     margin-left: 1.07rem;
 }
 
-.social-btn .fa-linkedin{
+.social-btn .fa-linkedin {
     color: var(--bright-color);
     margin-left: 1.07rem;
 }
 
-.social-btn .fa-whatsapp{
+.social-btn .fa-whatsapp {
     color: var(--bright-color);
     margin-left: 1.09rem;
 }
 
-.center-icon{
+.center-icon {
     font-size: 2rem;
 }
 
@@ -237,48 +265,111 @@ header {
     color: var(--bright-color);
 }
 
-.about{
+.about {
     display: flex;
     flex-direction: column;
     margin: 0 15%;
     gap: 3rem;
 }
 
-.about-title{
+.about-title {
     font-size: 2.5rem;
     text-align: center;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
 }
 
-.about-text{
+.about-title.hidden {
+    opacity: 0;
+}
+
+.about-title.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-text {
     font-size: 1.5rem;
     text-align: justify;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    margin-bottom: 2rem;
+    transition-delay: 700ms;
 }
 
-.about-strong{
+.about-text.hidden {
+    opacity: 0;
+}
+
+.about-text.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-strong {
     color: var(--main-color);
 }
 
-.cs{
+.prog-img {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.language-img {
+    width: 5rem;
+    object-fit: contain;
+    transition: all 1s ease-out;
+
+}
+
+.language-img.hidden {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.language-img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.prog-img :nth-child(2){
+    transition-delay: 300ms;
+}
+
+.prog-img :nth-child(3){
+    transition-delay: 600ms;
+}
+
+.prog-img :nth-child(4){
+    transition-delay: 900ms;
+}
+
+.prog-img :nth-child(5){
+    transition-delay: 1200ms;
+}
+
+.cs {
     color: #853688;
     font-weight: 700;
 }
 
-.c{
+.c {
     color: #3f4caf;
     font-weight: 700;
 }
 
-.html{
+.html {
     color: #f16a30;
     font-weight: 700;
 }
 
-.css{
+.css {
     color: #088dcc;
     font-weight: 700;
 }
 
-.js{
+.js {
     color: #f7e025;
     font-weight: 700;
 }
@@ -314,18 +405,20 @@ header {
 }
 
 @keyframes fly {
-    0%{
+    0% {
         transform: translateY(10px);
     }
-    50%{
+
+    50% {
         transform: translateY(-10px);
     }
-    100%{
+
+    100% {
         transform: translateY(10px);
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .menu-list {
         display: flex;
         flex-direction: column;
@@ -363,52 +456,69 @@ header {
         display: none;
     }
 
-    .social{
+    .social {
         flex-direction: row;
         gap: 1rem;
     }
 
-    .main-one{
+    .main-one {
         flex-direction: column-reverse;
     }
 
-    .image{
+    .image {
         height: 70%;
     }
 
-    .center-icon{
+    .center-icon {
         display: none;
     }
 
-    .about{
+    .about {
         margin: 0 5%;
     }
 
-    .scroll-about{
+    .scroll-about {
         margin-left: 40%;
     }
 
-    .about-title{
+    .about-title {
         font-size: 2rem;
     }
-    
-    .about-text{
+
+    .about-text {
         font-size: 1rem;
     }
 
-    .social-btn:hover:nth-child(1){
+    .social-btn:hover:nth-child(1) {
         width: 4rem;
     }
-    
-    .social-btn:hover:nth-child(2){
+
+    .social-btn:hover:nth-child(2) {
         width: 4rem;
     }
-    
-    .social-btn:hover:nth-child(3){
+
+    .social-btn:hover:nth-child(3) {
         width: 4rem;
     }
-    
-    .social-btn:hover:nth-child(4){
+
+    .social-btn:hover:nth-child(4) {
         width: 4rem;
+    }
+
+    .prog-img {
+        gap: 1.5rem;
+    }
+    .language-img {
+        width: 3.5rem;
+    }
+
+    .language-img.hidden {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    .language-img.show {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
