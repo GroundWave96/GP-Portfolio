@@ -376,10 +376,14 @@ header {
 
 .three {
     background-color: var(--background-color);
+    color: var(--bright-color);
+    font-size: 2rem;
 }
 
 .four {
     background-color: var(--background-color);
+    color: var(--bright-color);
+    font-size: 2rem;
 }
 
 .five {
@@ -395,9 +399,22 @@ header {
 }
 
 .content-contact-title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.55rem;
     color: var(--bright-color);
+    transition: opacity 5s ease-in, transform 5s ease-in;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.content-contact-title.hidden {
+    opacity: 0;
+    transform: scale(.5);
+
+}
+
+.content-contact-title.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .content-contact-form {
@@ -457,7 +474,17 @@ header {
     color: var(--bright-color);
     background: var(--main-color);
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.5s ease-in-out, opacity 2s ease-in;
+    transform: translateX(-100%);
+}
+
+.content-contact-form-button.hidden{
+    opacity: 0;
+}
+
+.content-contact-form-button.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .content-contact-form-button:hover,
@@ -466,6 +493,34 @@ header {
     color: var(--secondary-color);
     background: var(--bright-color);
     transform: scale(1.1);
+}
+
+.form-title{
+    transition: all 2.5s ease-in-out;
+    transform: translateX(50%);
+}
+
+.form-title.hidden{
+    opacity: 0;
+}
+
+.form-title.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-input{
+    transition: all 1s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.form-input.hidden{
+    opacity: 0;
+}
+
+.form-input.show{
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @keyframes blob {
@@ -483,6 +538,18 @@ header {
 
     100% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
     }
 }
 
@@ -612,6 +679,10 @@ header {
     .content-contact-form {
         width: 90%;
         max-width: 90%;
+    }
+
+    .form-title{
+        transform: translateX(5%);
     }
 }
 
