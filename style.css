@@ -496,7 +496,7 @@ header {
 }
 
 .form-title{
-    transition: all 2.5s ease-in-out;
+    transition: all 4s ease-in-out;
     transform: translateX(50%);
 }
 
