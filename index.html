@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Pimentel</title>
+    <link rel="icon" href="./assets/icon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -27,8 +28,8 @@
             <ul class="menu-list">
                 <li><a class="menu-list-btn" href="#one">Início</a></li>
                 <li><a class="menu-list-btn" href="#two">Sobre mim</a></li>
-                <li><a class="menu-list-btn" href="#three">Projetos</a></li>
-                <li><a class="menu-list-btn" href="#four">Currículo</a></li>
+                <li><a class="menu-list-btn" href="#three">Experiências</a></li>
+                <li><a class="menu-list-btn" href="#four">Projetos</a></li>
                 <li><a class="menu-list-btn" href="#five">Contato</a></li>
             </ul>
         </nav>
@@ -71,7 +72,6 @@
             <section class="page two" id="two">
                 <div class="about">
                     <h1 class="about-title hidden">
-                        CodeJourney: A Caminhada de
                         <strong class="about-strong">Gabriel Henrique</strong>
                         no Desenvolvimento de Software
                     </h1>
@@ -102,7 +102,21 @@
                 <h1>Fourth Page</h1>
             </section>
             <section class="page five" id="five">
-                <h1>Fifth Page</h1>
+                <section class="content-contact">
+                    <h1 class="content-contact-title">Contato</h1>
+                    <form class="content-contact-form" action="https://formsubmit.co/gabrielhfp96@gmail.com" method="POST">
+                        <input type="hidden" name="_template" value="table">
+                        <!-- <input type="hidden" name="_next" value="TKSPAGEeEEEeeeEEEEeEEeEEEEeEEEEeeEEEEeEEE"> -->
+                        <input type="hidden" name="_subject" value="New submission from Portfolio!">
+                        <label class="content-contact-form-label" for="name">Nome</label>
+                        <input class="content-contact-form-input" type="text" name="name" required />
+                        <label class="content-contact-form-label" for="email">E-mail</label>
+                        <input class="content-contact-form-input" type="email" name="email" required />
+                        <label class="content-contact-form-label" for="message">Mensagem</label>
+                        <textarea class="content-contact-form-textarea" name="message" required></textarea>
+                        <button class="content-contact-form-button" type="submit" data-button>Enviar</button>
+                    </form>
+                </section>
             </section>
         </div>
     </main>
