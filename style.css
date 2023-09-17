@@ -174,7 +174,6 @@ header {
 
 .scroll-about.show {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .social {
@@ -478,7 +477,7 @@ header {
     }
 
     .scroll-about {
-        margin-left: 30%;
+        margin-left: 0%;
     }
 
     .about-title {
