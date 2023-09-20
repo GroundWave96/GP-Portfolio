@@ -7,14 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Pimentel</title>
     <link rel="icon" href="./assets/icon.png">
+
+    <!-- ======================================== CSS ======================================== -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ======================================== Cloudflare ======================================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ======================================== Unicons ======================================== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ======================================== Swiper ======================================== -->
+    <link rel="stylesheet" href="./swiper/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.css" />
 </head>
 
 <body>
+
+    <!-- ======================================== Menu ======================================== -->
 
     <head>
         <nav id="menu" class="menu">
@@ -37,6 +48,9 @@
 
     <main>
         <div class="container">
+
+            <!-- ======================================== Home ======================================== -->
+
             <section class="page one" id="one">
                 <div class="main-one">
                     <div class="social">
@@ -51,12 +65,13 @@
                             <span>Instagram</span>
                         </div>
                         <div class="social-btn hidden">
-                            <a class="social-icon" href="https://www.linkedin.com/in/gabriel-pimentel-12bb83190/" target="_blank"><i
-                                    class="fa-brands fa-linkedin"></i></a>
+                            <a class="social-icon" href="https://www.linkedin.com/in/gabriel-pimentel-12bb83190/"
+                                target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                             <span>LinkedIn</span>
                         </div>
                         <div class="social-btn hidden">
-                            <a class="social-icon" href="https://api.whatsapp.com/send?phone=+5511953725013&text=Ol%C3%A1%2C+vim+pelo+seu+portif%C3%B3lio%21+%F0%9F%91%8B"
+                            <a class="social-icon"
+                                href="https://api.whatsapp.com/send?phone=+5511953725013&text=Ol%C3%A1%2C+vim+pelo+seu+portif%C3%B3lio%21+%F0%9F%91%8B"
                                 target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                             <span>WhatsApp</span>
                         </div>
@@ -69,6 +84,9 @@
                 <a href="#two" class="scroll-about hidden"><i class="uil uil-mouse-alt"></i> Scroll Down <i
                         class="uil uil-arrow-down"></i></a>
             </section>
+
+            <!-- ======================================== About ======================================== -->
+
             <section class="page two" id="two">
                 <div class="about">
                     <h1 class="about-title hidden">
@@ -95,25 +113,63 @@
                     </div>
                 </div>
             </section>
+
+            <!-- ======================================== Career ======================================== -->
+
             <section class="page three" id="three">
                 <h1>Experiências</h1>
             </section>
+
+            <!-- ======================================== Projects ======================================== -->
+
             <section class="page four" id="four">
                 <h1>Projetos</h1>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="content-slide">
+                                <img src="./assets/site-viagem.png"
+                                    alt="Notebook com o projeto de site de viagens aberto">
+                                <div class="information-slide">
+                                    <h1 class="project-title">Site de Viagens</h1>
+                                    <p class="project-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Nulla nobis in magnam, cupiditate necessitatibus debitis vel accusamus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </section>
+
+            <!-- ======================================== Contact ======================================== -->
+
             <section class="page five" id="five">
                 <section class="content-contact">
                     <h1 class="content-contact-title hidden">Contato</h1>
-                    <form class="content-contact-form" action="https://formsubmit.co/gabrielhfp96@gmail.com" method="POST">
+                    <form class="content-contact-form" action="https://formsubmit.co/gabrielhfp96@gmail.com"
+                        method="POST">
                         <input type="hidden" name="_template" value="table">
                         <!-- <input type="hidden" name="_next" value="TKGEeEEEeeeEEEEeEEeEEEEeEEEEeeEEEEeEEE"> -->
                         <input type="hidden" name="_subject" value="New submission from Portfolio!">
                         <label class="content-contact-form-label form-title hidden" for="name">Nome</label>
                         <input class="content-contact-form-input form-input hidden" type="text" name="name" required />
                         <label class="content-contact-form-label form-title hidden" for="email">E-mail</label>
-                        <input class="content-contact-form-input form-input hidden" type="email" name="email" required />
+                        <input class="content-contact-form-input form-input hidden" type="email" name="email"
+                            required />
                         <label class="content-contact-form-label form-title hidden" for="message">Mensagem</label>
-                        <textarea class="content-contact-form-textarea form-input hidden" name="message" required></textarea>
+                        <textarea class="content-contact-form-textarea form-input hidden" name="message"
+                            required></textarea>
                         <button class="content-contact-form-button hidden" type="submit" data-button>Enviar</button>
                     </form>
                 </section>
@@ -125,7 +181,13 @@
 
     </footer>
 
+    <!-- ======================================== SwiperJS ======================================== -->
+    <script src="./swiper/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.js"></script>
+
+    <!-- ======================================== JavaScrip ======================================== -->
     <script src="./app.js"></script>
+
+
 
 </body>
 

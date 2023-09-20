@@ -1,4 +1,4 @@
-/* ----------Menu---------- */
+/* ======================================== Menu ======================================== */
 
 const btnMobile = document.getElementById("menu-mobile-btn");
 
@@ -11,7 +11,7 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
-/* ----------Scroll-animation---------- */
+/* ======================================== Scroll-animation ======================================== */
 
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -27,5 +27,18 @@ const elements = document.querySelectorAll('.hidden')
 
 elements.forEach((element) => myObserver.observe(element))
 
-/* ----------a---------- */
-/* ----------a---------- */
+/* ======================================== Swiper ======================================== */
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
