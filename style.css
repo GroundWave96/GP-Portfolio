@@ -818,14 +818,11 @@ header {
     }
 }
 
-@media (max-height: 850px) {
-    .swiper-slide img {
-        display: none;
-    }
-}
-
 @media (max-width: 370px) {
     .social-btn {
         transform: translateX(-100%);
+    }
+    .swiper-slide img {
+        display: none;
     }
 }
