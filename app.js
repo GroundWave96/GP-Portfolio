@@ -1,6 +1,7 @@
 /* ======================================== Menu ======================================== */
 
 const btnMobile = document.getElementById("menu-mobile-btn");
+const menuListBtns = document.querySelectorAll(".menu-list-btn");
 
 function toggleMenu(event) {
     if (event.type == 'touchstart') event.preventDefault();
@@ -10,6 +11,10 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+menuListBtns.forEach(btn => {
+    btn.addEventListener('click', toggleMenu);
+});
 
 /* ======================================== Scroll-animation ======================================== */
 
@@ -31,7 +36,7 @@ elements.forEach((element) => myObserver.observe(element))
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 50,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
