@@ -778,6 +778,11 @@ header {
         width: auto;
         height: 55%;
     }
+
+    .project-text{
+        
+        margin: 10px 50px 40px 50px;
+    }
 }
 
 @media (max-width: 800px) {
