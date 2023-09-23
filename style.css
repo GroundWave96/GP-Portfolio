@@ -803,9 +803,13 @@ header {
     .swiper-slide img {
         height: 35%;
     }
+
+    .project-text {
+        font-size: 0.9rem;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 390px) {
     .social-btn {
         transform: translateX(-100%);
     }
