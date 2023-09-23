@@ -405,6 +405,18 @@ header {
     width: 80%;
     height: 80%;
     border-radius: 1rem;
+    transition: transform 1s ease-out;
+}
+
+.swiper.hidden {
+    opacity: 0;
+    transform: scale(0);
+
+}
+
+.swiper.show {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .swiper-slide {
@@ -514,7 +526,7 @@ header {
     width: 100%;
 }
 
-.content-contact-title {
+.content-title {
     font-size: 3rem;
     margin-bottom: 0.55rem;
     color: var(--bright-color);
@@ -522,13 +534,13 @@ header {
     animation: pulse 3s ease-in-out infinite;
 }
 
-.content-contact-title.hidden {
+.content-title.hidden {
     opacity: 0;
     transform: scale(.5);
 
 }
 
-.content-contact-title.show {
+.content-title.show {
     opacity: 1;
     transform: scale(1);
 }
