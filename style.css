@@ -113,6 +113,38 @@ header {
     height: 92svh;
 }
 
+
+/* ======================================== Scroll Button ======================================== */
+
+#progress {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    height: 70px;
+    width: 70px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    z-index: 10;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 15%);
+    width: calc(100% - 15%);
+    background-color: var(--bright-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: var(--header-color);
+    z-index: 11;
+    text-decoration: none;
+}
+
+
 /* ======================================== Scroll ======================================== */
 
 .page {
@@ -398,7 +430,7 @@ header {
     transform: translateX(0);
 }
 
-.curriculum a{
+.curriculum a {
     display: block;
     width: 220px;
     line-height: 40px;
@@ -523,28 +555,28 @@ header {
     display: none;
 }
 
-.content{
+.content {
     gap: 2rem;
 }
 
-.content .block div{
+.content .block div {
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
 }
 
-.content h2{
+.content h2 {
     font-size: 2rem;
     margin: 0;
 }
 
-.content span{
+.content span {
     font-size: 1rem;
     text-align: center;
 }
 
-.content p{
+.content p {
     font-size: 1.5rem;
     text-align: center;
 }
@@ -1045,26 +1077,36 @@ header {
     .form-title {
         transform: translateX(5%);
     }
+
+    #progress {
+        height: 0;
+        width: 0;
+
+    }
+
+    #progress-value {
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
-    .tab-btn{
+    .tab-btn {
         font-size: 1.5rem;
     }
 
-    .line{
+    .line {
         top: 65px;
     }
-    
-    .content h2{
+
+    .content h2 {
         font-size: 1.5rem;
     }
-    
-    .content span{
+
+    .content span {
         font-size: 0.7rem;
     }
-    
-    .content p{
+
+    .content p {
         font-size: 1rem;
     }
 
@@ -1104,34 +1146,34 @@ header {
         font-size: 1rem;
     }
 
-    .tab-btn{
+    .tab-btn {
         font-size: 1rem;
     }
 
-    .line{
+    .line {
         top: 55px;
     }
-    
-    .content h2{
+
+    .content h2 {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width: 580px) {
-    .career{
+    .career {
         padding: 0 .5rem;
     }
 
-    .tab-box{
+    .tab-box {
         gap: .2rem;
     }
 
-    .tab-btn{
+    .tab-btn {
         padding: 1rem 0;
         font-size: .85rem;
     }
 
-    .line{
+    .line {
         top: 50px;
     }
 }

@@ -16,7 +16,28 @@ menuListBtns.forEach(btn => {
     btn.addEventListener('click', toggleMenu);
 });
 
-/* ======================================== Scroll-animation ======================================== */
+/* ======================================== Scroll Button ======================================== */
+
+function myFunction() {
+    const element = document.getElementById("myDIV");
+    let scrollProgress = document.getElementById("progress");
+    let y = element.scrollTop;
+
+    if (y > 100) {
+        scrollProgress.style.display = "grid";
+    } else {
+        scrollProgress.style.display = "none";
+    }
+
+    let calcHeight =
+        element.scrollHeight -
+        element.clientHeight;
+    let scrollValue = Math.round((y * 100) / calcHeight);
+
+    scrollProgress.style.background = `conic-gradient(var(--main-color) ${scrollValue}%, var(--bright-color) ${scrollValue}%)`;
+}
+
+/* ======================================== Scroll Animation ======================================== */
 
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

@@ -47,7 +47,13 @@
     </head>
 
     <main>
-        <div class="container">
+        <div id="myDIV" onscroll="myFunction()" id="container" class="container">
+
+            <!-- ======================================== Scroll Button ======================================== -->
+
+            <div id="progress">
+                <a id="progress-value" href="#home"><i class="fa-solid fa-angles-up"></i></a>
+            </div>
 
             <!-- ======================================== Home ======================================== -->
 
@@ -242,12 +248,13 @@
                         <!-- <input type="hidden" name="_next" value="TKGEeEEEeeeEEEEeEEeEEEEeEEEEeeEEEEeEEE"> -->
                         <input type="hidden" name="_subject" value="New submission from Portfolio!">
                         <label class="content-contact-form-label form-title hidden" for="name">Nome</label>
-                        <input class="content-contact-form-input form-input hidden" type="text" name="name" required />
+                        <input class="content-contact-form-input form-input hidden" id="name" autocomplete="name"
+                            type="text" name="name" required />
                         <label class="content-contact-form-label form-title hidden" for="email">E-mail</label>
-                        <input class="content-contact-form-input form-input hidden" type="email" name="email"
-                            required />
+                        <input class="content-contact-form-input form-input hidden" id="email" autocomplete="email"
+                            type="email" name="email" required />
                         <label class="content-contact-form-label form-title hidden" for="message">Mensagem</label>
-                        <textarea class="content-contact-form-textarea form-input hidden" name="message"
+                        <textarea class="content-contact-form-textarea form-input hidden" id="message" name="message"
                             required></textarea>
                         <button class="content-contact-form-button hidden" type="submit" data-button>Enviar</button>
                     </form>
