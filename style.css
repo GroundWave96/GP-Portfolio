@@ -1187,6 +1187,10 @@ header {
     #progress-value {
         display: none;
     }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
