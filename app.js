@@ -1,3 +1,26 @@
+/* ======================================== Loading Animation ======================================== */
+
+/* const logo = document.querySelectorAll("#logo path");
+
+for (let i = 0; i < logo.length; i++) {
+    console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
+} */
+
+var loader = document.getElementById("loading");
+
+function fadePreLoader(){
+    document.getElementById("loading").style.opacity = '0';
+}
+
+function closePreLoader(){
+    document.getElementById("loading").style.display = 'none';
+}
+
+window.addEventListener("load",function(){
+    setTimeout(fadePreLoader, 3800);
+    setTimeout(closePreLoader,4200);
+});
+
 /* ======================================== Menu ======================================== */
 
 const btnMobile = document.getElementById("menu-mobile-btn");

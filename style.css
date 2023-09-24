@@ -16,6 +16,69 @@
     scroll-behavior: smooth;
 }
 
+/* ======================================== Loading Animation ======================================== */
+
+.loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#logo {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 3s;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 883;
+    stroke-dashoffset: 883;
+    animation: line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 681;
+    stroke-dashoffset: 681;
+    animation: line-anim 2s ease forwards .3s;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 848;
+    stroke-dashoffset: 848;
+    animation: line-anim 2s ease forwards .6s;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 763;
+    stroke-dashoffset: 763;
+    animation: line-anim 2s ease forwards .9s;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 316;
+    stroke-dashoffset: 316;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 645;
+    stroke-dashoffset: 645;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#logo path:nth-child(7) {
+    stroke-dasharray: 413;
+    stroke-dashoffset: 413;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
 /* ======================================== Menu ======================================== */
 
 header {
@@ -113,6 +176,28 @@ header {
     height: 92svh;
 }
 
+/* ======================================== Scroll Bar ======================================== */
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--header-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
 
 /* ======================================== Scroll Button ======================================== */
 
@@ -854,6 +939,21 @@ header {
 }
 
 /* ======================================== Animations ======================================== */
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: var(--bright-color);
+    }
+}
 
 @keyframes blob {
     0% {
