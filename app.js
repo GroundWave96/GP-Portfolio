@@ -32,6 +32,31 @@ const elements = document.querySelectorAll('.hidden')
 
 elements.forEach((element) => myObserver.observe(element))
 
+/* ======================================== Tab ======================================== */
+
+const tabs = document.querySelectorAll('.tab-btn');
+const allContent = document.querySelectorAll('.content');
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(tab => {
+            tab.classList.remove('active')
+        });
+        tab.classList.add('active');
+
+        var line = document.querySelector('.line');
+
+        line.style.width = e.target.offsetWidth + "px";
+        line.style.left = e.target.offsetLeft + "px";
+        line.style.display = "block";
+
+        allContent.forEach(content => {
+            content.classList.remove('active')
+        });
+        allContent[index].classList.add('active');
+    })
+})
+
 /* ======================================== Swiper ======================================== */
 
 var swiper = new Swiper(".mySwiper", {
@@ -39,11 +64,11 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 50,
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
