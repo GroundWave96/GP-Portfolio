@@ -2,7 +2,7 @@
 
 Apresento o meu portfólio, um projeto construído com as linguagens HTML, CSS e JavaScript. Aqui, você encontrará informações detalhadas sobre a minha jornada acadêmica e profissional no mundo da programação.
 
-![image](https://github.com/GroundWave96/GP-Portfolio/assets/54560401/cb7799d7-386e-4ff2-8335-6398c889e5a4)
+![site](https://github.com/GroundWave96/GP-Portfolio/assets/54560401/f10f123d-917f-4514-8af8-dc85196d1db6)
 
 ## Site:
 
