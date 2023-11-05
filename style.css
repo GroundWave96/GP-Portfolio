@@ -239,6 +239,7 @@ header {
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* ======================================== Home ======================================== */
@@ -247,7 +248,6 @@ header {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    scroll-snap-stop: always;
 }
 
 .main-one {
@@ -391,7 +391,6 @@ header {
 .two {
     background-color: var(--background-color);
     color: var(--bright-color);
-    scroll-snap-stop: always;
 }
 
 .about {
@@ -567,7 +566,6 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    scroll-snap-stop: always;
 }
 
 .career {
@@ -678,7 +676,6 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    scroll-snap-stop: always;
 }
 
 .swiper {
@@ -808,7 +805,6 @@ header {
 
 .five {
     background-color: var(--background-color);
-    scroll-snap-stop: always;
 }
 
 .content-contact {
