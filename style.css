@@ -34,49 +34,49 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fill 0.5s ease forwards 3s;
+    animation: fill 0.5s ease forwards 1.8s;
 }
 
 #logo path:nth-child(1) {
     stroke-dasharray: 883;
     stroke-dashoffset: 883;
-    animation: line-anim 2s ease forwards;
+    animation: line-anim 1s ease forwards;
 }
 
 #logo path:nth-child(2) {
     stroke-dasharray: 681;
     stroke-dashoffset: 681;
-    animation: line-anim 2s ease forwards .3s;
+    animation: line-anim 1s ease forwards .2s;
 }
 
 #logo path:nth-child(3) {
     stroke-dasharray: 848;
     stroke-dashoffset: 848;
-    animation: line-anim 2s ease forwards .6s;
+    animation: line-anim 1s ease forwards .4s;
 }
 
 #logo path:nth-child(4) {
     stroke-dasharray: 763;
     stroke-dashoffset: 763;
-    animation: line-anim 2s ease forwards .9s;
+    animation: line-anim 1s ease forwards .6s;
 }
 
 #logo path:nth-child(5) {
     stroke-dasharray: 316;
     stroke-dashoffset: 316;
-    animation: line-anim 2s ease forwards 1.2s;
+    animation: line-anim 1s ease forwards .8s;
 }
 
 #logo path:nth-child(6) {
     stroke-dasharray: 645;
     stroke-dashoffset: 645;
-    animation: line-anim 2s ease forwards 1.5s;
+    animation: line-anim 1s ease forwards 1s;
 }
 
 #logo path:nth-child(7) {
     stroke-dasharray: 413;
     stroke-dashoffset: 413;
-    animation: line-anim 2s ease forwards 1.8s;
+    animation: line-anim 1s ease forwards 1.2s;
 }
 
 /* ======================================== Menu ======================================== */
