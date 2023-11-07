@@ -17,8 +17,8 @@ function closePreLoader(){
 }
 
 window.addEventListener("load",function(){
-    setTimeout(fadePreLoader, 3800);
-    setTimeout(closePreLoader,4200);
+    setTimeout(fadePreLoader, 3000);
+    setTimeout(closePreLoader,3400);
 });
 
 /* ======================================== Menu ======================================== */
